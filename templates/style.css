@@ -1,0 +1,19 @@
+.nav-link {
+    color: rgb(5, 12, 75); 
+}
+.custom-nav .navbar-brand, 
+.custom-nav .navbar-text {
+
+    color:rgb(5, 12, 75);
+    
+}
+
+.navbar {
+    background-color: rgb(231, 227, 228);
+}
+.border {
+    border-radius: 10px;
+    border:rgb(5, 12, 75) solid 15px;
+
+
+}
