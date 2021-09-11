@@ -1,0 +1,30 @@
+body, html {
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.hero-image {
+  height: 50vh;
+  background-image: url("./images/landingphoto.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  background-color: rgb(19, 39, 75);
+}
+
+/* buttons */
+
+#join {
+    background-color: rgb(211, 1, 1);
+    width: 25%;
+    height: 5em;
+    border-color: rgb(211, 1, 1);
+}
+
+.secondary {
+    background-color: rgb(19, 39, 75);
+    border-color: rgb(19, 39, 75);
+    width: 10em;
+    height: 3em;
+}
