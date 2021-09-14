@@ -1,106 +1,58 @@
-<html lang='en'>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/american-football_1f3c8.png">
     <title>NFL Bets</title>
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' rel='stylesheet'
-        integrity='sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We' crossorigin='anonymous' />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/styles.css">
 </head>
-
 <body>
-    <!-- <nav class='navbar navbar-expand-lg mb-5 custom-nav'>
-        <div class='container'>
-            <a class="navbar-brand" href="/">
-                <img src="/Users/Kate/Desktop/football.png" alt="" width="30" height="24"
-                    class="d-inline-block align-text-top custom-nav">
-                NFL Bets
-            </a>
-    
-            <ul class='navbar-nav'>
-                <li class='nav-item'>
-                    <a class='nav-link' href='/sign-up'>Join</a>
-                </li>
-    
-                <li class='nav-item'>
-                    <a class='nav-link' href='/login'>Login</a>
-                </li>
-    
+    <nav class="navigation">
+        <a href="#" class="pull-left"><img src="../public/images/logo.jpg"></a>
+        <ul class="navigation__list">
+            <li><a class="navigation__list-link" href="#">Login</a></li>
+            <li><a class="navigation__list-link" href="#">Schedule</a></li>
+            <li><a class="navigation__list-link" href="#">Dashboard</a></li>
+        </ul>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" id="navburger" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <div class="hb"></div>
+                <div class="hb"></div>
+                <div class="hb"></div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" id="drop-down">
+            <li><button class="dropdown-item" type="button">Login</button></li>
+            <li><button class="dropdown-item" type="button">Schedule</button></li>
+            <li><button class="dropdown-item" type="button">Dashboard</button></li>
             </ul>
         </div>
-    </nav> -->
-
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-light p-4">
-          <h5 class="text-blue h4">Create Account</h5>
-          <span class="text-muted">Sign in</span>
-        </div>
-      </div>
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <a class='navbar-brand'href='/'>
-            <img src="/Users/Kate/Desktop/football.png" alt="" width="30" height="24" class="d-inline-block align-text-top custom-nav">NFL Bets</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Sign In</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    
-                  </ul>
-                </li>
-              </ul>
-        </div>
-      </nav>
-   
+    </nav>
     <div class="container">
-        
-        <div class="card mt-5">
-            <form id='login-form'>
-                <div class="card-body text-center">
-                    <h1>Please Login</h1>
-                    <div class="input-group mb-3">
-                        <input type="username" class="form-control" placeholder="Username" id="login-username"
-                            autocomplete="off">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password" id="login-password"
-                            autocomplete="off">
-                    </div>
-                    <button class="btn btn-primary me-md-2" type="submit">Login!</button>
-                    <br>
-                    <br>
-                    <div class="card-footer">
-                        <p>New to Tech Blog?</p>
-                        <a href="/signup" class="btn btn-primary me-md-2" type="button">Create Account</a>
-                    </div>
-                </div>
-            </form>
-        </div>
+        where {{{body}}} goes
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    </body>
-    </html>
- 
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="footer-copyright-container">
+                <img id="logo_footer" src="../public/images/logo.jpg">
+                <br>
+                © 2021 NFL/BETS
+            </div>
+        </div>
+        <div class="foot-container" id="contact">
+            <div id="contact-avatars">
+                <ul id="horizontal-list">
+                    <li><a href="https://github.com/ktmac21" target="_blank"><img src="../public/images/kate.jpg" alt="Avatar" class="avatar"></a></li>
+                    <li><a href="https://github.com/aungy5" target="_blank"><img src="../public/images/andrew.jpg" alt="Avatar" class="avatar"></a></li>
+                    <li><a href="https://github.com/Dominick-Simone" target="_blank"><img src="../public/images/dom.jpg" alt="Avatar" class="avatar"></a></li>
+                    <li><a href="https://github.com/chemacenturion" target="_blank"><img src="../public/images/me.jpg" alt="Avatar" class="avatar"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-<!-- <script src='/templates/script.js'></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</body>
