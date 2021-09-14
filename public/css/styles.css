@@ -14,7 +14,7 @@ body {
 /* landing page */
 .hero-image {
   height: 50vh;
-  background-image: url("../images/landingphoto.png");
+  background-image: url("../images/nflbetslogo-removebg-preview.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -27,8 +27,9 @@ body {
     #join {
         background-color: rgb(211, 1, 1);
         width: 25%;
-        height: 5em;
+        height: 4em;
         border-color: rgb(211, 1, 1);
+        font-size: x-large;
     }
     .secondary {
         background-color: rgb(19, 39, 75);
@@ -37,6 +38,24 @@ body {
         height: 3em;
     }
 
+    .card-body {
+        padding: 0rem;
+        text-align: center;
+        background-color: rgb(19, 39, 75);
+        padding: 1em;
+    }
+
+    .card-link {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: large;
+    }
+
+    .card {
+        margin: 1em;
+    }
+        /* mobile view buttons (>600px) */
+        
 /* ================================================================================================================================ */
 
 /* Navbar */
@@ -86,7 +105,7 @@ body {
 
         #drop-down {
             width: 100vw;
-            background-image: url('../images/turf.jpg');
+            background-color:rgb(19, 39, 75);
         }
 
         .dropdown-item {
@@ -94,14 +113,13 @@ body {
             text-align: center;
             font-weight: 500;
             font-size: 20px;
-            text-shadow: -1px 1px 0 #000,
-                          1px 1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
+        }
+
+        .dropdown-menu {
+            border: none;
         }
 
 /* ================================================================================================================================ */
-
 
 /* Footer */
 
@@ -164,7 +182,17 @@ body {
 
 /* @mediaqueries */
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .navigation__list {display:none}
     .btn-group {display: inline}
+    .container-large {display:none}
+}
+
+@media only screen and (max-width: 400px) {
+    .avatar {width: 1.5em}
+    ul#horizontal-list {padding-left: 0rem;}
+}
+
+@media only screen and (min-device-width: 600px) {
+    .container-small {display:none}
 }
