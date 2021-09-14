@@ -1,0 +1,8 @@
+<div class="bets">
+    {{#each this}}
+    <div class="bet-info">
+        <h4>Bet added by {{user.name}} on {{format_date createdAt}}</h4>
+        <p>{{user.name}} picked {{bet_pick}} to win the game!</p>
+    </div>
+    {{/each}}
+</div>

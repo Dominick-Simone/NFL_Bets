@@ -16,9 +16,18 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+    },
+    fav_team: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    points: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0
     },
     email: {
       type: DataTypes.STRING,

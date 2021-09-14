@@ -1,0 +1,8 @@
+<h1>NFL Games for this Week</h1>
+{{#each games as |game|}}
+
+{{> game-details game}}
+
+{{else}}
+<h1>There are no games to display!!</h1>
+{{/each}}
