@@ -42,6 +42,34 @@ Game.init({
         type: DataTypes.INTEGER,
         allowNull: false
     },
+    stadium_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    playing_surface: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    type: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    channel: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    forecast_wind_chill: {
+        type: DataTypes.INTEGER,
+        allowNull: null
+    },
+    forecast_description: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    forecast_wind_speed: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
 },
 {
     sequelize,
