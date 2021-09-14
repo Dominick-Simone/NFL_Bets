@@ -1,0 +1,22 @@
+[
+    {
+      "bet_pick": "DAL", 
+      "user_id": "2",
+      "game_id": "1"
+    },
+    {
+      "bet_pick": "TB", 
+      "user_id": "3",
+      "game_id": "1"
+    },
+    {
+      "bet_pick": "PHI", 
+      "user_id": "3",
+      "game_id": "2"
+    },
+    {
+      "bet_pick": "BUF", 
+      "user_id": "2",
+      "game_id": "3"
+    }
+]

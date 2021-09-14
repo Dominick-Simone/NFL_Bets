@@ -1,0 +1,32 @@
+[
+    {
+      "home_team": "TB",
+      "away_team": "DAL",
+      "start_time": "2021-09-09T20:20:00",
+      "score_id": "17682",
+      "status": "Final",
+      "point_spread": "-13.5",
+      "home_team_moneyline": "-657",
+      "away_team_moneyline": "+510"
+    },
+    {
+      "home_team": "ATL",
+      "away_team": "PHI",
+      "start_time": "2021-09-12T13:00:00",
+      "score_id": "17683",
+      "status": "Final",
+      "point_spread": "-5.2",
+      "home_team_moneyline": "-266",
+      "away_team_moneyline": "+222"
+    },
+    {
+      "home_team": "BUF",
+      "away_team": "PIT",
+      "start_time": "2021-09-12T13:00:00",
+      "score_id": "17684",
+      "status": "Final",
+      "point_spread": "-9.7",
+      "home_team_moneyline": "-422",
+      "away_team_moneyline": "+346"
+    }
+]

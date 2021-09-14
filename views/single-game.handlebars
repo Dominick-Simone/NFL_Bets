@@ -1,0 +1,26 @@
+{{> game-details game}}
+
+<h1>BETS</h1>
+
+{{> bet-details game.bets}}
+
+{{#if loggedIn}}
+<div class="add-bet">
+<h1>ADD YOUR OWN BET</h1>
+<p>Add your own bet on this game using the form below.</p>
+<form class="bet-form">
+<div>
+<label for="bet-pick">Bet</label>
+    <select class="form-control" id="bet-pick" name="bet-pick">
+      <option>{{game.home_team}}</option>
+      <option>{{game.away_team}}</option>
+    </select>
+</div>
+<button type="submit" class="btn btn-primary">Place Bet!</button>
+</form>
+</div>
+{{/if}}
+
+{{#if loggedIn}}
+<script src="/js/placebet.js"></script>
+{{/if}}
