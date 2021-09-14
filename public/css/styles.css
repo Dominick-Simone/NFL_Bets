@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+/* ================================================================================================================================ */
+
+/* landing page */
+.hero-image {
+  height: 50vh;
+  background-image: url("../images/landingphoto.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  background-color: rgb(19, 39, 75);
+}
+
+    /* landing page buttons */
+
+    #join {
+        background-color: rgb(211, 1, 1);
+        width: 25%;
+        height: 5em;
+        border-color: rgb(211, 1, 1);
+    }
+    .secondary {
+        background-color: rgb(19, 39, 75);
+        border-color: rgb(19, 39, 75);
+        width: 10em;
+        height: 3em;
+    }
+
+/* ================================================================================================================================ */
+
+/* Navbar */
+.navigation {
+    background-color: rgb(19, 39, 75);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    .pull-left {
+        padding: 10px;
+    }
+    .navigation__list {
+        padding: 10px;
+        margin: 10px;
+    }
+    .navigation__list li{
+        display: inline;
+    }
+    .navigation__list-link {
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+        /* hamburger nav */
+        .btn-group {
+            display: none;
+            padding-right: 25px;
+        }
+        .hb {
+    
+            width: 35px;
+            height: 2px;
+            background-color: whitesmoke;
+            margin: 6px 0;
+            
+        }
+        #navburger {
+            background-color:rgb(19, 39, 75);
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        #drop-down {
+            width: 100vw;
+            background-image: url('../images/turf.jpg');
+        }
+
+        .dropdown-item {
+            color: whitesmoke;
+            text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+        }
+
+/* ================================================================================================================================ */
+
+
+/* Footer */
+
+.page-footer {
+    background: rgb(174, 175, 185);
+    text-align: center;
+    color: black;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgb(188, 191, 197);
+    width: 100vw;
+    padding-top: 10px;
+}
+
+    .contact_section {
+        text-align: center;
+        align-content: center;
+    }
+
+    .avatar {
+        vertical-align: middle;
+        width: 3rem;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    #horizontal-list ul{
+        list-style: none;
+        padding-top: 20px;
+    }
+
+    #horizontal-list li{
+        display: inline-block;
+    }
+
+    .footer-copyright {
+        padding: 0px 10px;
+    }
+
+    .footer-copyright-container {
+        color: rgb(71, 70, 70);
+        text-align: left;
+        font-size: 10px;
+        padding: 0px 10px;
+    }
+
+    #logo_footer {
+        height: 2rem;
+        width: auto;
+    }
+
+    .foot-container {
+        display: flex;
+        justify-content: end;
+    }
+
+/* ================================================================================================================================ */
+
+/* @mediaqueries */
+
+@media screen and (max-width: 600px) {
+    .navigation__list {display:none}
+    .btn-group {display: inline}
+}
