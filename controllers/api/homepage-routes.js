@@ -21,9 +21,6 @@ router.get("/", async (req, res) => {
             const type = week[i].StadiumDetails.Type
             const scoreId = week[i].ScoreID
             const channel = week[i].Channel
-            const windChill = week[i].ForecastWindChill
-            const forecast = week[i].ForecastDescription
-            const windSpeed = week[i].ForecastWindSpeed
             const newGame = {
                 home_team: team1,
                 away_team: team2,
@@ -36,10 +33,7 @@ router.get("/", async (req, res) => {
                 score_id: scoreId,
                 playing_surface: playingSurface,
                 type: type,
-                forecast_wind_chill: windChill,
-                channel: channel,
-                forecast_description: forecast,
-                forecast_wind_speed: windSpeed
+                channel: channel
             }
             games.push(newGame)
         }
