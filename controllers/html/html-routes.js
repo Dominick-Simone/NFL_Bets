@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const { Op } = require('sequelize');
 const { User, Game, Bet } = require("../../models");
-
+const { withAuth } = require('../../utils/helpers');
 // get all games and render the homepage
-router.get('/', (req, res) => {
-    console.log(req.session);
+router.get('/', withAuth, (req, res) => {
+    console.log(req.session.loggedIn);
 
     Game.findAll({
         attributes: [
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
         const games = gameData.map(game => game.get({ plain: true }));
         res.render('homepage', {
             games,
-            loggedIn: req.session.loggedIn
+            loggedIn: true
         });
     })
     .catch (err => {
