@@ -50,7 +50,7 @@ Game.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    type: {
+    stadium_type: {
         type: DataTypes.STRING,
         allowNull: false
     },

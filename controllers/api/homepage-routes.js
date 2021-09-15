@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
             const stadiumName = week[i].StadiumDetails.Name
             const startTime = week[i].DateTime
             const playingSurface = week[i].StadiumDetails.PlayingSurface
-            const type = week[i].StadiumDetails.Type
+            const stadiumType = week[i].StadiumDetails.Type
             const scoreId = week[i].ScoreID
             const channel = week[i].Channel
             const newGame = {
@@ -32,7 +32,7 @@ router.get("/", async (req, res) => {
                 start_time: startTime,
                 score_id: scoreId,
                 playing_surface: playingSurface,
-                type: type,
+                stadium_type: stadiumType,
                 channel: channel
             }
             games.push(newGame)
