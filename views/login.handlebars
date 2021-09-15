@@ -1,13 +1,33 @@
-<form class="login-form">
+{{!-- <form class="login-form">
   <div class="form-group">
-    <label for="loginInputEmail">Email address</label>
     <input type="email" class="form-control" id="loginInputEmail" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="loginInputPassword">Password</label>
     <input type="password" class="form-control" id="loginInputPassword" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<script src="/js/login.js"></script> --}}
+
+
+<form class="login-form">
+  <div class="card-body text-center">
+    <h1>Please Login</h1>
+      <div class="input-group mb-3">
+        <input type="email" class="form-control" placeholder="Enter Email" id="loginInputEmail" autocomplete="off">
+      </div>
+      <div class="input-group mb-3">
+        <input type="password" class="form-control" placeholder="Password" id="loginInputPassword" autocomplete="off">
+      </div>
+      <button class="btn btn-primary me-md-2" type="submit">Login!</button>
+        <br>
+        <br>
+      <div class="card-footer">
+          <p>New to NFL BETS</p>
+          <a href="/signup" class="btn btn-primary me-md-2" type="button">Create Account</a>
+      </div>
+  </div>
 </form>
 
 <script src="/js/login.js"></script>
