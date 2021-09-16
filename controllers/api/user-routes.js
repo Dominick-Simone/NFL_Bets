@@ -52,10 +52,12 @@ router.post('/signup', (req, res) => {
 
 router.get('/logout', (req, res) => {
     if (req.session.loggedIn) {
+        
         req.session.destroy(() => {
+            res.redirect('/login');
             res.status(204).end();
         });
-        res.redirect('/login');
+        
     } else {
         res.status(404).end()
     }
