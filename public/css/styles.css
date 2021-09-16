@@ -4,8 +4,18 @@
     box-sizing: border-box;
 }
 
+html,body {
+    position: relative;
+    margin:0;
+    padding:0;
+    overflow:auto;
+}
+
 body {
     background-color: lightgrey;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ================================================================================================================================ */
@@ -54,6 +64,24 @@ body {
         margin: 1em;
     }
         /* mobile view buttons (>600px) */
+    .container-small {
+        display: flex;
+        margin: 2em;
+    }
+
+    .btn-responsive {
+        margin: .5em;
+        width: 75vw;
+        background-color: rgb(19, 39, 75);
+        border-radius: 5px;
+        color: whitesmoke;
+        height: 50px;
+    }
+
+    #btn-join {
+        background-color: rgb(211, 1, 1);
+    }
+
         
 /* ================================================================================================================================ */
 
@@ -156,19 +184,22 @@ option {
     border-color: rgb(19, 39, 75);
 }
 
+/* ================================================================================================================================ */
+
 /* Footer */
 
 .page-footer {
     background: rgb(174, 175, 185);
     text-align: center;
     color: black;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     display: flex;
     justify-content: space-between;
     border-top: 2px solid rgb(188, 191, 197);
     width: 100vw;
     padding-top: 10px;
+    margin-top: auto;
 }
 
     .contact_section {
@@ -228,9 +259,14 @@ option {
     ul#horizontal-list {padding-left: 0rem;}
 }
 
+@media only screen and (max-width: 300px) {
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {padding: 0}
+}
+
 @media only screen and (min-device-width: 600px) {
     .container-small {display:none}
     .select-box {width: 600px}
     #login-card,
     #signup-card {width: 30vw}
 }
+
