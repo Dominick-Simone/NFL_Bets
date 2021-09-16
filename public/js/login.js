@@ -22,6 +22,7 @@ const loginFormHandler = async function (event) {
         document.location.replace('/dashboard');
       } else {
         alert('Failed to log in');
+        
       }
     }
   };

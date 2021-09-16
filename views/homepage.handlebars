@@ -1,7 +1,16 @@
 <h1>NFL Games for this Week</h1>
 {{#each games as |game|}}
-
-{{> game-details game}}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{home_team}} vs {{away_team}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{start_time}}</h6>
+        <h6>{{point_spread}}</h6>
+        <h6>{{home_team_money_line}}</h6>
+        <h6>{{away_team_money_line}}</h6>
+        <p class="card-text">{{> game-details game}}.</p>
+        <a href="/single-game" class="card-link">Go to Game</a>
+    </div>
+</div>
 
 {{else}}
 <h1>There are no games to display!!</h1>
