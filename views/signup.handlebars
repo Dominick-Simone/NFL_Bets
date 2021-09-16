@@ -1,45 +1,59 @@
-{{!-- <form class="signup-form">
-  <div class="form-group">
-    <label for="signupInputEmail">Email address</label>
-    <input type="email" class="form-control" id="signupInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="signupInputUsername">Username</label>
-    <input type="username" class="form-control" id="signupInputUsername" placeholder="Username">
-  </div>
-  <div class="form-group">
-    <label for="signupInputPassword">Password</label>
-    <input type="password" class="form-control" id="signupInputPassword" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="signupInputPassword">Favorite Team</label>
-    <input type="fav_team" class="form-control" id="signupInputFavTeam" placeholder="Favorite Team">
-  </div>
-  <button type="submit" class="btn btn-primary">Sign Up</button>
-</form>
-
-<script src="/js/signup.js"></script> --}}
-
-
-<form class="sign-up-form">
-  <div class="card-body text-center">
-    <h1>Create Account</h1>
-      <div class="input-group mb-3">
-          <input type="email" class="form-control" id="signupInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-      </div>
-      <div class="input-group mb-3">
-          <input type="username" class="form-control" id="signupInputUsername" placeholder="Username">
-      </div>
-      <div class="input-group mb-3">
-        <input type="password" class="form-control" id="signupInputPassword" placeholder="Password">
-      </div>
-      <div class="input-group mb-3">
-        <input type="fav_team" class="form-control" id="signupInputFavTeam" placeholder="Favorite Team">
-      </div>
-      <div class="card-footer bg-transparent border-success">
-          <button class="btn btn-primary me-md-2" type="submit">Create Account!</button>
-      </div>
-  </div>
-</form>
+<div class="card-columns mx-auto d-flex justify-content-center col-12">
+  <form class="signup-form mt-5">
+    <div class="card-body text-center" id="signup-card">
+      <img class="card-logo" src="../images/logo.jpg">
+        <div class="input-group mb-3">
+            <input type="email" class="form-control" id="signupInputEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+        </div>
+        <div class="input-group mb-3">
+            <input type="username" class="form-control" id="signupInputUsername" placeholder="Enter Username">
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" id="signupInputPassword" placeholder="Enter Password (min. 6)">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" list="city-name" class="form-control" id="signupInputFavTeam" placeholder="Enter Favorite Team">
+          <datalist class="select-box" id="city-name" required>
+            <option value="" disabled selected hidden>Choose Favorite Team...</option>
+            <option value="ARI">
+            <option value="ATL">
+            <option value="BAL">
+            <option value="BUF">
+            <option value="CAR">
+            <option value="CHI">
+            <option value="CIN">
+            <option value="CLE">
+            <option value="DAL">
+            <option value="DEN">
+            <option value="DET">
+            <option value="GB">
+            <option value="HOU">
+            <option value="IND">
+            <option value="JAX">
+            <option value="KC">
+            <option value="MIA">
+            <option value="MIN">
+            <option value="NE">
+            <option value="NO">
+            <option value="NYG">
+            <option value="NYJ">
+            <option value="LV">
+            <option value="PHI">
+            <option value="PIT">
+            <option value="LAC">
+            <option value="SF">
+            <option value="SEA">
+            <option value="LAR">
+            <option value="TB">
+            <option value="TEN">
+            <option value="WAS">
+          </datalist>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary me-md-2" id="create-account-btn" type="submit">Create Account!</button>
+        </div>
+    </div>
+  </form>
+</div>
 
 <script src="/js/signup.js"></script>
