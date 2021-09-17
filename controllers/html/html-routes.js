@@ -144,7 +144,20 @@ router.get('/game/:id', async (req, res) => {
 // only render games that the user's favorite team is playing in on the dashboard
 router.get('/dashboard', (req, res) => {
     console.log(req.session);
-
+    let users;
+    User.findAll({
+        attributes: [
+            'id',
+            'name',
+            'email',
+            'fav_team',
+            'points'
+        ],
+        order: [['points', 'DESC']]
+    })
+    .then(userData => {
+        users = userData.map(user => user.get({ plain: true }));
+    })
     Game.findAll({
         where: {
             [Op.or]: [
