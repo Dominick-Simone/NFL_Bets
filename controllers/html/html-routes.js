@@ -5,7 +5,14 @@ const Score = require('../../models/score');
 const Team = require('../../models/team');
 const { withAuth } = require('../../utils/helpers');
 // get all games and render the homepage
-router.get('/', withAuth, async (req, res) => {
+
+router.get('/', (req,res) => {
+    res.render('landing', {
+        layout: false
+    })
+})
+router.get('/schedule', withAuth, (req, res) => {
+
     console.log(req.session.loggedIn);
 
     Game.findAll({
