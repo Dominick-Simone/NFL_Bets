@@ -11,11 +11,11 @@
 </head>
 <body>
     <nav class="navigation">
-        <a href="/" class="pull-left"><img src="../images/logo.jpg"></a>
+        <a href='/' class="pull-left"><img src="../images/logo.jpg"></a>
         <ul class="navigation__list">
         
             <li><a class="navigation__list-link" href="/" id="dashboard">Schedule</a></li>
-            <li><a class="navigation__list-link" href="/leaderboard" id="leaderboard">Dashboard</a></li>
+            <li><a class="navigation__list-link" href="/dashboard" id="leaderboard">Dashboard</a></li>
         {{#if loggedIn}}
             <li><a class="navigation__list-link" href="api/users/logout" id="logout">Logout</a></li>
         {{else}}
