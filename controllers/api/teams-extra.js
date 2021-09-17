@@ -5,14 +5,7 @@ const Score = require('../../models/score');
 const Team = require('../../models/team');
 const { withAuth } = require('../../utils/helpers');
 // get all games and render the homepage
-
-router.get('/', (req,res) => {
-    res.render('landing', {
-        layout: false
-    })
-})
-router.get('/schedule', withAuth, (req, res) => {
-
+router.get('/', withAuth, async (req, res) => {
     console.log(req.session.loggedIn);
 
     Game.findAll({
@@ -30,8 +23,7 @@ router.get('/schedule', withAuth, (req, res) => {
             'home_team_moneyline',
             'away_team_moneyline',
             'home_team_id',
-            'away_team_id',
-            'status'
+            'away_team_id'
         ],
         include: [
             {
@@ -46,8 +38,23 @@ router.get('/schedule', withAuth, (req, res) => {
     .then(gameData => {
         const games = gameData.map(game => game.get({ plain: true }));
         console.log(games)
+        async function getTeams() {
+            const teams = await Team.findAll({
+                where: {
+                    [Op.or]: [
+                        { home_team_id: gameData.home_team_id },
+                        { away_team_id: gameData.away_team_id }
+                    ] 
+                },
+                attributes: ['id','abbreviation','full_name','logo'],
+            })
+            return teams;
+        }
+        getTeams();
+        console.log(teams)
         res.render('homepage', {
             games,
+            teams,
             loggedIn: true
         });
     })

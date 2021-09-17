@@ -25,8 +25,16 @@ router.post('/', withAuth, (req, res) => {
     .then (betData => {
         const betCheck = betData.map(bet => bet.get({ plain: true }));
         console.log(betCheck);
+        for (i=0; i < betCheck.length; i++) {
+            const game_id = betCheck[i].game_id
+            console.log(game_id)
+        //}
 
-        if (betCheck.length == 0) {
+        if (game_id = req.body.game_id) {
+            console.log("YOUR ALREADY PLACED A BET ON THIS GAME")
+            //alert("YOUR ALREADY PLACED A BET ON THIS GAME")
+        }
+        else {
             console.log("PLACING YOUR BET")
             
             Bet.create({
@@ -39,12 +47,8 @@ router.post('/', withAuth, (req, res) => {
                 console.log(err);
                 res.status(400).json(err);
             });
-        } else {
-            console.log("YOUR ALREADY PLACED A BET ON THIS GAME")
-            //window.alert("YOUR ALREADY PLACED A BET ON THIS GAME")
         }
-    });
+    } // <-- comment this out if u uncoment the } on line 31
+    
+})
 });
-
-
-module.exports = router;
