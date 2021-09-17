@@ -1,10 +1,27 @@
 const router = require("express").Router()
 const axios = require("axios");
-const { User, Game, Bet } = require("../../models");
+const { withAuth } = require('../../utils/helpers');
+const { User, Game, Bet, Team } = require("../../models");
 
-router.get('/:id', (req, res) => {
-    
-})
+router.get('/teamscheck', withAuth, (req, res) => {
+    Team.findAll({
+        include: [
+            {
+                model: Game
+            }
+        ]
+    })
+    .then(gameData => {
+        const games = gameData.map(game => game.get({ plain: true }));
+        console.log(games)
+        //res.status(200).json
+    })
+    .catch (err => {
+        console.log(err)
+        res.status(500).json(err);
+    });
+});
+
 
 
 
