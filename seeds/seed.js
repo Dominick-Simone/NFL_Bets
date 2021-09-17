@@ -1,9 +1,12 @@
 const sequelize = require('../config/connection');
-const { User, Game, Bet } = require('../models');
+const { User, Game, } = require('../models');
 
 const userData = require('./userData.json');
 const gameData = require('./gameData.json');
-const betData = require('./betData.json');
+const teamData = require('./teamData.json');
+const scoreData = require('./scoreData.json')
+const Team = require('../models/team');
+const Score = require('../models/score');
 
 
 const seedDatabase = async () => {
@@ -14,15 +17,25 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  await Team.bulkCreate(teamData, {
+    individualHooks: true,
+    returning: true
+  })
+
   await Game.bulkCreate(gameData, {
     individualHooks: true,
     returning: true,
   });
 
-  await Bet.bulkCreate(betData, {
+  await Score.bulkCreate(scoreData, {
     individualHooks: true,
-    returning: true,
-  });
+    returning: true
+  })
+
+  // await Bet.bulkCreate(betData, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
 
   process.exit(0);
 };

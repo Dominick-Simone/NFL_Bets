@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require("../../models");
+const { User, Bet } = require("../../models");
 
 router.post('/login', async (req, res) => {
     try {
@@ -66,6 +66,13 @@ router.get('/logout', (req, res) => {
         res.status(404).end()
     }
 });
+
+router.put('/', async (req, res) => {
+    const updateUsers = await User.update({
+        id: req.params.id,
+        points: req.params.points
+    })
+})
 
 
 module.exports = router;
