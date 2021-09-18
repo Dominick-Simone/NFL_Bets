@@ -174,7 +174,7 @@ router.get('/dashboard', (req, res) => {
         // SOCKET IO CODE TO GET THE TWEETS HERE 
         res.render('dashboard', {
             games,
-            //tweets,
+            users,
             loggedIn: req.session.loggedIn
             //,fav_team: req.session.fav_team 
         });
