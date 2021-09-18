@@ -58,23 +58,23 @@ Game.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    home_team_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'team',
-            key: 'id'
-        }
+    // home_team_id: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    //     references: {
+    //         model: 'team',
+    //         key: 'id'
+    //     }
         
-    },
-    away_team_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'team',
-            key: 'id'
-        }
-    }
+    // },
+    // away_team_id: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    //     references: {
+    //         model: 'team',
+    //         key: 'id'
+    //     }
+    // }
 },
 {
     sequelize,
