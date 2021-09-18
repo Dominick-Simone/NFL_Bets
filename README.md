@@ -5,6 +5,7 @@
 ## Table of Contents
 ​
 * [Description](#Description)
+* [Screenshot](#Screenshot)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [License](#License)
@@ -15,6 +16,9 @@
 ​
 ## Description:
 NFL Bets is an online web application in which users can create an account and place bets on a weekly schedule of NFL games. The user can create an account, view their favorite team and any bets they placed on their user dashboard. The user can also see live tweets related to their favorite team's game. A leaderboard is displayed that keeps track of which users are making the most correct bets.
+
+# Screenshot
+![NFL BETS](https://drive.google.com/file/d/1PGGDnzraKYaZWWLjM2GymI5KRfBuH4eb/view)
 ​
 ## Technologies Used:
 ​
