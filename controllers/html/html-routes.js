@@ -16,11 +16,6 @@ router.get('/schedule', withAuth, (req, res) => {
     console.log(req.session.loggedIn);
 
     Game.findAll({
-        where: {
-            home_team_id: {
-                [Op.ne]: null
-            }
-        },
         attributes: [
             'id',
             'home_team',
@@ -29,8 +24,6 @@ router.get('/schedule', withAuth, (req, res) => {
             'start_time',
             'home_team_moneyline',
             'away_team_moneyline',
-            'home_team_id',
-            'away_team_id',
             'status'
         ],
         include: [
