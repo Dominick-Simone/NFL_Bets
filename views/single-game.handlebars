@@ -1,26 +1,51 @@
-{{> game-details game}}
+<div class="grid__container ms-2">
+  <div class="grid__container-1 grid-item shadow p-3 mb-5 bg-body rounded" id="single-game-container">
+    <header class="fav__header"> Selected Game </header>
+      <div class="container" id="fav__container">
+        <div class="row" id="fav__header">
+          <div class="col text-center">
+            Home Team
+          </div>
+          <div class="col text-center">
+            Away Team
+          </div>
+        </div>
+      </div>
+      <div class="container" id="leaderboard__container-inner">
+        <div class="row" id="game-details-game">
+            {{> game-details game}}
+        </div>
+      </div>
+  </div>
 
-<h1>BETS</h1>
+<div class="grid__container-2 grid-item shadow p-3 mb-5 bg-body rounded">
+  <header class="fav__header">Game Bets</header>
+      <div class="row" id="game-bets-container">
 
-{{> bet-details game.bets}}
+      {{> bet-details game.bets}}
 
-{{#if loggedIn}}
-<div class="add-bet">
-<h1>ADD YOUR OWN BET</h1>
-<p>Add your own bet on this game using the form below.</p>
-<form class="bet-form">
-<div>
-<label for="bet-pick">Bet</label>
-    <select class="form-control" id="bet-pick" name="bet-pick">
-      <option>{{game.home_team}}</option>
-      <option>{{game.away_team}}</option>
-    </select>
+      {{#if loggedIn}}
+      
+      
+      <div class="add-bet">
+      <h1>ADD YOUR OWN BET</h1>
+      <p>Add your own bet on this game using the form below.</p>
+      <form class="bet-form">
+      <div>
+      <label for="bet-pick">Bet</label>
+          <select class="form-control" id="bet-pick" name="bet-pick">
+            <option>{{game.home_team}}</option>
+            <option>{{game.away_team}}</option>
+          </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Place Bet!</button>
+      </form>
+      </div>
+      {{/if}}
+
+      {{#if loggedIn}}
+      <script src="/js/placebet.js"></script>
+      {{/if}}
+    </div>
+  </div>
 </div>
-<button type="submit" class="btn btn-primary">Place Bet!</button>
-</form>
-</div>
-{{/if}}
-
-{{#if loggedIn}}
-<script src="/js/placebet.js"></script>
-{{/if}}

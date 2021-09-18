@@ -1,15 +1,64 @@
-<H1> YOUR FAVORITE TEAM'S GAMES </H1>
+<div class="grid__container">
+    <div class="grid__container-1 grid-item shadow p-3 mb-5 bg-body rounded">
+        <header class="fav__header"> Favorite Team's Games </header>
+            <div class="container" id="fav__container">
+                <div class="row" id="fav__header">
+                    <div class="col text-center">
+                        Home Team
+                    </div>
+                    <div class="col text-center">
+                        Away Team
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="leaderboard__container-inner">
+                {{#each games as |game|}}
+                    <div class="row" id="game-details-game">
+                    {{> game-details game}}
+                    </div>
+                    {{/each}}
+            </div>
+    </div>
+    <div class="grid__container-2 grid-item shadow p-3 mb-5 bg-body rounded">
+        <header class="leaderboard__header">Leaderboard</header>
+        <div class="container" id="leaderboard__container">
+            <div class="row" id="leaderboard__header">
+                <div class="col ms-2">
+                    Name
+                </div>
+                <div class="col text-center">
+                    Points
+                </div>
+                <div class="col">
+                    Favorite Team
+                </div>
+            </div>
+        </div>
+        <div class="container" id="leaderboard__container-inner">
+            {{#each users as |user|}}
+                <div class="row ms-2" id="user-details-user">
+                    {{> user-details user}}
+                </div>       
+                    {{else}}
+        
+                    {{/each}}
+        </div>
+    </div>
+    <div class="grid__container-3 grid-item">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Monday Night Football: 2021 edition ‼️ <a href="https://t.co/4zvcb7YT03">pic.twitter.com/4zvcb7YT03</a></p>&mdash; NFL on ESPN (@ESPNNFL) <a href="https://twitter.com/ESPNNFL/status/1392631594041712647?ref_src=twsrc%5Etfw">May 13, 2021</a></blockquote>
+                </div>
+                <div class="carousel-item">
+                   <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Washington Football Team come back to beat the Giants by ONE POINT 🤯 <a href="https://t.co/EEeXeP5y0z">pic.twitter.com/EEeXeP5y0z</a></p>&mdash; ESPN (@espn) <a href="https://twitter.com/espn/status/1438712386530258946?ref_src=twsrc%5Etfw">September 17, 2021</a></blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Daniel Jones has lost all 6 of his primetime starts in the NFL. No quarterback since 1950 has started their career with 7 straight losses in primetime (h/t <a href="https://twitter.com/EliasSports?ref_src=twsrc%5Etfw">@EliasSports</a>).<br><br>The Giants&#39; next primetime game is Nov. 1 on Monday Night Football. Against the Chiefs. On the road. <a href="https://t.co/BkJrlneIT4">pic.twitter.com/BkJrlneIT4</a></p>&mdash; ESPN Stats &amp; Info (@ESPNStatsInfo) <a href="https://twitter.com/ESPNStatsInfo/status/1438714823299133444?ref_src=twsrc%5Etfw">September 17, 2021</a></blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-{{#each games as |game|}}
-
-{{> game-details game}}
-
-{{/each}}
-
-{{#each users as |user|}}
-
-{{> user-details user}}
-
-{{else}}
-<h1>There are no posts to display!!</h1>
-{{/each}}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
