@@ -20,7 +20,7 @@ NFL Bets is an online web application in which users can create an account and p
 
 ## Screenshot:
 
-![NFL-BETS](https://drive.google.com/file/d/1PGGDnzraKYaZWWLjM2GymI5KRfBuH4eb/view)
+![NFL-BETS](https://github.com/aungy5/NFL_Bets/blob/main/public/images/NFLBETS.gif?raw=true)
 
 ## Deployed:
 
