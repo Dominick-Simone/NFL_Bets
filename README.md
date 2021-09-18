@@ -6,6 +6,7 @@
 ​
 * [Description](#Description)
 * [Screenshot](#Screenshot)
+* [Deployment](#Deployment)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [License](#License)
@@ -17,9 +18,14 @@
 ## Description:
 NFL Bets is an online web application in which users can create an account and place bets on a weekly schedule of NFL games. The user can create an account, view their favorite team and any bets they placed on their user dashboard. The user can also see live tweets related to their favorite team's game. A leaderboard is displayed that keeps track of which users are making the most correct bets.
 
-# Screenshot
-![NFL BETS](https://drive.google.com/file/d/1PGGDnzraKYaZWWLjM2GymI5KRfBuH4eb/view)
-​
+## Screenshot:
+
+![NFL-BETS](https://drive.google.com/file/d/1PGGDnzraKYaZWWLjM2GymI5KRfBuH4eb/view)
+
+## Deployed:
+
+https://vast-eyrie-51403.herokuapp.com/
+
 ## Technologies Used:
 ​
 1. HTML & CSS
