@@ -1,7 +1,11 @@
-<div class="jumbotron" id="blog-post"> 
-<a href="/user/{{id}}"><h1 class="display-4" id="user-id">{{name}}</h1></a>
-<p class="lead" id="user-name">{{name}} has {{points}} points</p>
-<hr class="my-4">
-<p>Email: {{email}}</p>
-<p>Favorite Team: {{fav_team}}</p>
+<div class="col">
+    <p><a href="/user/{{id}}" id="user-id">{{name}}</a></p>
 </div>
+<div class="col text-center">
+    <p>{{points}}</p>
+</div>
+<div class="col text-center">
+    <p>{{fav_team}}</p>
+</div>
+
+

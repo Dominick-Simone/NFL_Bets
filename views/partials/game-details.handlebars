@@ -1,8 +1,12 @@
-<div class="jumbotron" id="blog-post"> 
-<a href="/game/{{id}}"><h1 class="display-4" id="game-id">{{home_team}} vs. {{away_team}}</h1></a>
-<p class="lead" id="user-name">{{home_team}} odds are {{home_team_moneyline}}</p>
-<p class="lead" id="user-name">{{away_team}} odds are {{away_team_moneyline}}</p>
-<p class="lead" id="user-name">This game will kickoff at {{format_date start_time}}</p>
-<p class="lead" id="user-name">The point spread for this game is {{point_spread}}</p>
-<hr class="my-4">
+<div class="col text-center">
+    <a href="/game/{{id}}" class="display-4" id="game-id-home">{{home_team}}</a>
+    <p>{{home_team}} odds are {{home_team_moneyline}}</p>
+</div>
+<div class="col text-center">
+    <a href="/game/{{id}}"class="display-4" id="game-id-away">{{away_team}}</a>
+    <p>{{away_team}} odds are {{away_team_moneyline}}</p>
+</div>
+<div class="row text-center" id="game-kick-off">
+    <p>This game will kickoff on {{format_date start_time}}</p>
+    <p>The point spread for this game is {{point_spread}}</p>
 </div>

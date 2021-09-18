@@ -1,17 +1,24 @@
-<h1>NFL Games for this Week</h1>
-{{#each games as |game|}}
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">{{home_team}} vs {{away_team}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{start_time}}</h6>
-        <h6>{{point_spread}}</h6>
+<div class="games__container mt-5 shadow p-3 mb-5 bg-body rounded">
+  <div class="games__container-1 grid-item text-center">
+    <header class="fav__header"> NFL Games For This Week </header>
+        <div class="container" id="fav__container">
+            <div class="row" id="fav__header">
+                <div class="col text-center">
+                    Home Team
+                </div>
+                <div class="col text-center">
+                    Away Team
+                </div>
+            </div>
+        </div>
+        {{#each games as |game|}}
+    <div class="row" id="game-row">
         <h6>{{home_team_money_line}}</h6>
         <h6>{{away_team_money_line}}</h6>
-        <p class="card-text">{{> game-details game}}.</p>
-        <a href="/single-game" class="card-link">Go to Game</a>
+        <p>{{> game-details game}}</p>
+    </div>
+    {{else}}
+    <h1>There are no games to display!!</h1>
+    {{/each}}
     </div>
 </div>
-
-{{else}}
-<h1>There are no games to display!!</h1>
-{{/each}}

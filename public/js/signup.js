@@ -25,7 +25,7 @@ async function signupForm(event) {
 
         if (response.ok) {
             console.log("Successfully created new user!");
-            document.location.replace('/leaderboard');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
             console.log(response)
