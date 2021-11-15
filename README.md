@@ -63,7 +63,7 @@ https://opensource.org/licenses/MIT
 - Andrew Ungvary  
 - Jose Centurion  
 - Kate Eagles  
-- Dominic Simone  
+- Dominick Simone  
 ​
 ## Tests:
 No tests at this time.
@@ -75,4 +75,4 @@ Please don't hesitate to reach out to any of the contributors on Github!
 - [Andrew Ungvary](https://github.com/aungy5)  
 - [Jose Centurion](https://github.com/chemacenturion)  
 - [Kate Eagles](https://github.com/ktmac21)  
-- [Dominic Simone](https://github.com/Dominick-Simone)
+- [Dominick Simone](https://github.com/Dominick-Simone)
