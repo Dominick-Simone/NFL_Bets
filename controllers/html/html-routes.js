@@ -135,7 +135,7 @@ router.get('/game/:id', async (req, res) => {
 });
 
 // only render games that the user's favorite team is playing in on the dashboard
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', withAuth, (req, res) => {
     console.log(req.session);
     let users;
     User.findAll({
